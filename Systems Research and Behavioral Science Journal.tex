@@ -85,11 +85,11 @@ We generalise an existing theory of greenfield design as problem solving for app
 \end{abstract}
 
 \section{Introduction}
-Continuous change is part of the make-up of the  modern organisation, and crucial to its survival and success in an ever-increasing competitive and volitive business environment. Information systems are often at the heart of organisational change, either as drivers or enablers, in their essential role within complex organisational socio-technical systems. This has led to the introduction of a multitude of approaches and theories on how to approach organisational change successfully. Yet a large proportion of change initiatives end in failure \cite{burnes2011success}: while the reasons are many and complex, some have been attributed to a lack of systematic guidance and direction, particularly in key re-design steps which are part of the change process \cite{doi:10.1108/14637159910249117,Reijers2005283,Gerrits:1994:BMB:646303.686971}. To remedy this deficiency, some have advocated the need for a structured, detailed design theory from which detailed methods can be derived to guide the change process \cite{verkerk2004trust,Kleiner:2000vm,By:2005fm}. The work presented in this paper makes a contribution towards addressing this challenge.
+Continuous change is part of the make-up of the  modern organisation, and crucial to its survival and success in an ever-increasing competitive and volitile business environment. Information systems are often at the heart of organisational change, either as drivers or enablers, in their essential role within complex organisational socio-technical systems. This has led to the introduction of a multitude of approaches and theories on how to approach organisational change successfully. Yet, a large proportion of change initiatives end in failure \cite{burnes2011success}: while the reasons are many and complex, some have been attributed to a lack of systematic guidance and direction, particularly in key re-design steps which are part of the change process \cite{doi:10.1108/14637159910249117}, \cite{Reijers2005283}, \cite{Gerrits:1994:BMB:646303.686971}. To remedy this deficiency, some have advocated the need for a structured, detailed design theory from which detailed methods can be derived to guide the change process \cite{verkerk2004trust}, \cite{Kleiner:2000vm}, \cite{By:2005fm}. The work presented in this paper makes a contribution towards addressing this challenge.
 
-Our overall research aim is the definition of a framework for addressing change problems systematically, by providing the means to represent, structure and  explore those problems. The framework is rooted in design and engineering, and extends an existing design theoretic framework for problem solving called Problem Oriented Engineering (POE in short, \cite{Hall2012ISSE}), hence its name {\it POE-$\Delta$}. Our review of past issues of the Systems Research and Behavioral Science journal show that this way of approaching change as a design problem might represent a novel idea for the journal's community. Therefore the paper discusses the motivation, theoretical foundation, characteristics and early evaluation of POE-$\Delta$.
+Our overall research aim is the definition of a framework for addressing change problems systematically, by providing the means to represent, structure and  explore those problems. The framework is rooted in design and engineering, and extends an existing design theoretic framework for problem solving called Problem Oriented Engineering (POE in short, \cite{Hall2012ISSE}), hence its name {\it POE-$\Delta$}. The paper discusses the motivation, theoretical foundation, characteristics and early evaluation of POE-$\Delta$.
 
-From a methodological perspective we have taken a design science approach \cite{Hevner:2010ua}, starting from an initial theoretical proposition based on POE, followed by empirical evaluation in the form of a case study in the context of a real-world organisation. 
+From a methodological perspective we take a design science approach \cite{Hevner:2010ua}, starting from an initial theoretical proposition based on POE, followed by empirical evaluation in the form of a case study in the context of a real-world organisation. 
 
 The remainder of this paper is organised as follows. Section \ref{sect:Background}, as mentioned, discusses some background literature. Section~\ref{sect:POEDelta} introduces POE-$\Delta$ and details of its initial evaluation. A discussion is given in  \ref{sect:Discussion}, while \ref{sect:Conclusion} concludes the paper. 
 
@@ -98,17 +98,29 @@ The remainder of this paper is organised as follows. Section \ref{sect:Backgroun
 \subsection{Organisational change}
 In the field of Management Science organisational change is defined as ``the process of continually renewing an organisation's direction, structure, and capabilities to serve the ever-changing needs of external and internal customers'' \cite{Moran:2000ex}. It has been the subject of study since the early 1950s, resulting in a multitude of approaches and theories on how it can be successfully tackled (see, e.g., reviews in \cite{vandeVen:1995uw} and \cite{pettigrew2001studying}). While there are significant differences between these approaches, a common criticism is that they only provide very high level change process descriptions to guide the organisation through change initiatives, and by and large are rather imprecise and unmethodical, and that this is true of even influential approaches adopted in practice, such as Total Quality Management (TQM) and Business Process Reengineering (BPR) \cite{Cao:2004dh}. Specific criticisms include: a lack of ``a systematic approach that can lead a process redesigner through a series of steps for the achievement of process redesign'' \cite{doi:10.1108/14637159910249117}; a lack of ``actual technical direction to (re)design a business process'' \cite{Reijers2005283}; a limitation to ``descriptions of the `situation before' and the `situation after', giving very little information on the redesign process itself'' \cite{Gerrits:1994:BMB:646303.686971}.
 
-Many have advocated the need for {\it design thinking} \cite{rowe1991design} in organisational change, and indeed this has become increasingly topical, with many articles discussing its role as an enabling concept which can be embedded within a development approach to organisational change (see, e.g., \cite{3460223} or \cite{deserti2014design}). However, still lacking is a design theory and systematic methods to make the re-design process more structured, easier to operationalise and less dependent on the creativity and intuition of single individuals, a clear objective advocated by some \cite{verkerk2004trust,Kleiner:2000vm}. With the notable exception of Aals and Hee's work on using colored Petri-Net to model and analyse business processes \cite{van1996business}, a number of other contributions, for instance \cite{grover1993information}, \cite{limam2007best}, \cite{reijers2005best}, \cite{berio2001enterprise}, describe best practices, heuristics, and models aimed at supporting the re-design process which can be used to bring more structure into the re-design process. They, however, come short of discussing how these techniques can be applied and integrated as part of an comprehensive methodology which provides guidance on the redesign process for practitioners and formalism to analyse change and its effect on the organisation. This is where our research comes in.
+Many have advocated the need for {\it design thinking} \cite{rowe1991design} in organisational change, and indeed this has become increasingly topical, with many articles discussing its role as an enabling concept which can be embedded within a development approach to organisational change (see, e.g., \cite{3460223} or \cite{deserti2014design}). However, still lacking is a design theory and systematic methods to make the re-design process more structured, easier to operationalise and less dependent on the creativity and intuition of single individuals, a clear objective advocated by some \cite{verkerk2004trust,Kleiner:2000vm}. A number of other contributions, for instance \cite{grover1993information}, \cite{limam2007best}, \cite{reijers2005best}, \cite{berio2001enterprise}, describe best practices, heuristics, and models aimed at supporting the re-design process which can be used to bring more structure into the re-design process. With the notable exception of Aals and Hee's work on using colored Petri-Net to model and analyse business processes \cite{van1996business}, all other works we have reviewed come short of discussing how these techniques can be applied and integrated as part of a comprehensive methodology which provides guidance on the redesign process for practitioners and formalism to analyse change and its effect on the organisation. This is where our research comes in.
+
+\subsection{Contributions}
+The management science conceptualisation of organisational change  as a ``difference in form, quality, or state over time in an organizational entity'' \cite{Van-de-Ven:2017aa} is suggestive of a benchmark approach to change: ``measure the same entity at two or more points in time on a set of dimensions and then calculate the differences.'' The dimensions can be sophisticated: number of employees, IT systems, geographical locations, etc., but are change agnostic: they are affected by change, but not aligned with it.
+
+In our approach, an organisation is characterised as a tangle of solved problems, with its future determined by the solving of problems it faces. This is a change-aligned view of the organisation – change consists of tangle understanding, problem understanding, problem solving and, finally, solution insertion into the tangle.
+ 
+\begin{itemize}
+	\item Contribution to knowledge
+	A key theoretical contribution of this research is approaching organisational change from a design theoretic perspective by applying design problem solving techniques to it. We define a new problem solving methodology for change problems, \POE{}-$\Delta$, to aid users in systematically analysing and solving change problems by helping them to better represent, structure, and explore them to pinpoint where intervention is necessary and what the ramification of that intervention could be. For this, \POE{}-$\Delta$ builds on \POE{}, an existing problem solving methodology for greenfield problem, and reframes it in the context of change (or brownfield) problems. This includes adaptations to POE's problem representation and analysis means, reinterpretation of its process pattern, extensions to its problem transformation patterns, as well as the definition of novel approaches to capture and explore co-design dependencies during the process of problem transformation, and while still remaining compatible to the parent framework, \POE{}. 
+	\item Contribution to practice
+	Additionally, the research aims to contribute to practice by gathering empirical evidence within real-world organisations as to the practicality and effectiveness of the new methodology. For this, we are currently in the process of preparing a comparison and an evaluation of \POE{}-$\Delta$ against other popular organisational change methodologies. The evaluation will be performed on a complex, real-live change problem in the context of a large, multinational IT organisation and will involve the participation of employees from different countries and at different levels of the organisation.
+\end{itemize}
 
 \subsection{Design Problem Solving}\label{design}
 
 Design problems were defined by \cite{jonassen2000toward} as real-world problems which are ill-stuctured and complex. Ill-structuredness implies that the starting point is often vague goals and intentions, with unclear success criteria, hence many degrees of freedom in the problem statement and no unique path to solution \cite{simon1977structure}%,goel1989motivating}
-. Complexity refers to number of issues and variables involved and their relationships, but also to their stability over time and uncertainty which is beyond the problem solver's grasp or control \cite{funke1991solving}%,fischer2011process}
-: as such complexity also relate to how difficult a problem is to solve for a human problem solver.
+. Complexity refers to the number of issues and variables involved and their relationships, but also to their stability over time and uncertainty which is beyond the problem solver's grasp or control \cite{funke1991solving}%,fischer2011process}
+: as such complexity also relates to how difficult a problem is to solve for a human problem solver.
 
-With its origin in engineering and system sciences, the notion of design problem has been extended to any design artefact, whether a physical product or a system or just a course of action \cite{smith1993conceptual}. In this sense, some have argued that many organisational problems \cite{martin2009design,leavy2010design} can be seen as design problems. 
+With its origin in engineering and system sciences, the notion of design problem has been extended to any design artefact, whether a physical product or a system or just a course of action \cite{smith1993conceptual}. In this sense, some have argued that many organisational problems \cite{martin2009design},\cite{leavy2010design} can be seen as design problems. 
 
-Design problem solving \cite{smith1993conceptual}  has been explored widely in the context of creating a new artefact, whether a physical product or a system or a course of action \cite{smith1993conceptual}, so-called {\it greenfield} design. Design problem solving for {\it brownfield} design, that is design aimed at changing a current situation in order to meet some new need in context, remains under-explored. With our research we contribute a systematisation of design problem solving in the case of change problems. 
+Design problem solving \cite{smith1993conceptual}  has been explored widely in the context of creating a new artefact, whether a physical product or a system or a course of action \cite{smith1993conceptual}, so-called {\it greenfield} design. Design problem solving for {\it brownfield} design, that is design aimed at changing a current solution in order to meet some new need in context, remains under-explored. With our research we contribute a systematisation of design problem solving in the case of change problems. 
 
 %In doing so, we rely on seminal work by Smith and Browne \cite{smith1993conceptual} that, on the basis of an extended critical review of the literature of the time, distilled a conceptual foundation of design problem solving with respect to salient features of design problems and the design activity to address them. Briefly, design problem solving needs to cope with their complexity and ill-structuredness, and must: 
 %\begin{itemize}
@@ -146,14 +158,12 @@ The POE problem solving process proceeds through a set of identifiable developme
 
 \POE{}-$\Delta$'s aim is to support users in systematically analysing and solving change problems by helping them to better represent, structure, and explore them to pinpoint where intervention is necessary and what the ramification of that intervention could be. To achieve this, \POE{}-$\Delta$, offers an entire problem solving methodology in the sense of Smith and Browne \cite{smith1993conceptual}, including means for problem representation, decomposition and exploration of alternative solutions and supported by a process pattern to guide the user through the problem capturing, transformation and validation steps.
 
-Like \POE{}, \POE{}-$\Delta$ is not supported by computational tools. Rather \POE{}-$\Delta$ links current tools and notations in new ways to support the change engineer.
-
 In the following we briefly introduce formal elements of \POE{}-$\Delta$ and report on its initial evaluation trough an organisational case study.
 
 \subsection{Background}
 \label{theory}
 
-The inspiration behind \POE{} is the definition of Rogers \cite{rogers1983nature}, in which is defined \textit{engineering} as:
+The inspiration behind \POE{} is the definition of Rogers \cite{rogers1983nature}, which is defines \textit{engineering} as:
 %
 \begin{quotation}
  the practice of organizing the design and construction of any artifice which transforms the physical world around us to meet some recognized need 
@@ -196,7 +206,7 @@ Irrespective of sense or solution existence, we will assume that $G$'s wish beco
 	\item migrating from $E$ to $F$.
 \end{enumerate}
 
-Like \POE{} \cite{hall2016a-design}, even if expressed linearly as bullet points, the challenge facing $D$ may be iterative and highly non-linear.
+Even if expressed linearly as bullet points, the challenge facing $D$ may be iterative and highly non-linear.
 
 \newcommand\CM{Pixel}
 \def\ColourMaker#{\textit{ColourMaker} (shortly \textit{CoMa})\gdef\ColourMaker{\textit{CoMa}}}
@@ -205,7 +215,7 @@ Like \POE{} \cite{hall2016a-design}, even if expressed linearly as bullet points
 \newcommand{\replacedBy}{\triangleright}
 \newcommand{\Java}{Swift}
 
-Given the above, we consider a change problem to be a four-tuple, written $E\Delta F\meets_G N$ (cf., \cite{hall2016a-design}) where $E$ and $F$ are both collections of domains and $N$ is a need. Unlike $E$ which is arrived at from an understanding of the real world, $F$ is a designed object, created through iteration of the steps CPS3 and CPS4. As such, and without constraining the languages in which existing and new components are or will be expressed, it is constrained in the forms it can take which are defined by the following grammar:
+Given the above, we consider a change problem to be a four-tuple, written $E\Delta F\meets_G N$ where $E$ and $F$ are both collections of domains and $N$ is a need. Unlike $E$ which is arrived at from an understanding of the real world, $F$ is a designed object, created through iteration of the steps CPS3 and CPS4. As such, and without constraining the languages in which existing and new components are or will be expressed, it is constrained in the forms it can take which are defined by the following grammar:
 %
 \[\footnotesize\begin{array}{rcll}
 	ChangeDomain &:=& Domain \mid Domain[\{Changeable\}](\{NewDomain\})\\
@@ -213,13 +223,13 @@ Given the above, we consider a change problem to be a four-tuple, written $E\Del
 	Domain, NewDomain, Need &:=& Name
 \end{array}\]
 %
-\begin{wrapfigure}{r}{0.4\textwidth}
+\begin{wrapfigure}{r}{0.45\textwidth}
 \centering{
 	 \includegraphics[width=0.39\textwidth]{pics/GraphicalNotation}}
   \caption{The \textit{ChangeDomain} notational conventions}
   \label{fig:notationIllustration}
 \end{wrapfigure}
-There are a number of representational conventions in the above grammar (illustrated in Figure~\ref{fig:notationIllustration}). Suppose the hierarchical domain $C=[D,E,F,G]$. Then:
+There are a number of representational conventions in the above grammar (illustrated in Figure~\ref{fig:notationIllustration}). Suppose the (hierarchical) domain $C=[D,E,F,G]$. Then:
 \begin{enumerate}
 	\item ($\{\}$) is written $()$; 
 	\item in the first clause of the $Change$ $Domain$ production, domain $C$ is undecorated. This identifies $C$ as a changeable domain, i.e., its embedded domains will be subject to further change analysis;
@@ -232,6 +242,7 @@ There are a number of representational conventions in the above grammar (illustr
 \item $J$ will be introduced by the change.
 \end{enumerate*}
 \end{enumerate}
+
 
 A change problem is said to be \textit{greenfield} whenever each $Changeable$ element is either $\cancel{Domain}$ or $Domain\replacedBy Domain$, i.e., each changeable element is either deleted or replaced. A change problem that isn't greenfield is \textit{brownfield}. Although we do not define the equivalence here, a greenfield change problem is equivalent to a (\textit{tangle} of) \POE{} problem(s) \cite{hall2016a-design}. As we shall see, as well as forging the link with \POE{}, the notion of a greenfield problem is at the core of what it means for a change problem to be solvable.
 
@@ -378,7 +389,7 @@ Concatenating the steps Georgi took gives the following change design tree:
 %\end{array}
 \end{example}
 
-\subsection{Case Study Evaluation}
+\subsection{Real-world Case Study Evaluation}
 \label{caseStudy}
 %The evaluation of the framework was conducted in form of a case study and aimed at evaluating the applicability and scalability of the \POE{}-$\Delta$ in a real-life context. 
 %
@@ -418,7 +429,7 @@ Moreover, we were interested in assessing its performance as a means of communic
 %	\item $R_3$: By the end of the project, the relevant know-how and infrastructure is handed over to the new offshore team and the capability to independently develop and innovate the product there is established.
 %\end{itemize}
 
- An initial need, in the form of three high level requirements, $R_1$ to $R_3$ (not reproduced here), was initially articulated by the case-study organisation as problem owner. The initial steps focused on exploring those requirements and gaining understanding of the relevant change problem context (Step CPS1). This involved acquiring knowledge and information by informally consulting a number of stakeholders and analysing the available tool and development documentation on processes, architecture and organisational setup, as well as the available OSLC specifications in order to understand their specific technological requirements. Through this initial knowledge acquisition step, the PI was able better to understand the problem and its domain, and introduce enough structure into it, in order to be able to capture it as the following \POE{}-$\Delta$ problem:
+ An initial need, in the form of three high level requirements, $R_1$ to $R_3$ (not reproduced here), was articulated by the case-study organisation as problem owner. The initial steps focused on exploring those requirements and gaining understanding of the relevant change problem context (Step CPS1). This involved acquiring knowledge and information by informally consulting a number of stakeholders and analysing the available tool and development documentation on processes, architecture and organisational setup, as well as the available OSLC specifications in order to understand their specific technological requirements. Through this initial knowledge acquisition step, the PI was able better to understand the problem and its domain, and introduce enough structure into it, in order to be able to capture it as the following \POE{}-$\Delta$ problem:
 
 \[
 	\begin{array}{ll}
@@ -456,7 +467,8 @@ The analysis proceeded with several alternating steps of problem, i.e., environm
 %	\label{fig:domains}
 %\end{figure}
 
-This high problem complexity made the change analysis steps (CPS3) very challenging. Due to the many dependencies between exposed environment domains, several of the change artefacts had to be \textit{co-designed}\footnote{\POE{} calls problems that share phenomena in this way tangled problems. Tangled problems are not always susceptible to simple divide and conquer problem solving strategies.}, i.e.,  changes in one domain would have an immediate impact on another domain. The colour coding in Figure~\ref{fig:tangles} indicated the complex overlaps between domains.
+\subsection{Complexity}
+This high problem complexity made the change analysis steps (CPS3) very challenging. Due to the many dependencies between exposed environment domains, several of the change artefacts had to be \textit{co-designed}\footnote{\POE{} calls problems that share phenomena in this way tangled problems. Tangled problems are not always susceptible to simple divide and conquer problem solving strategies.}, i.e.,  changes in one domain would have an immediate impact on another domain. Tangled problems are the main reason a classical problem decomposition approach does not always work in complex change problems: such divide and conquer strategy fails to capture the interdependent nature of the sub-problems. An illustrative example of this problem is the latest Apple Watch update. The design of the product required the overcoming the conflicting requirements of adding a new LTE chip inside the watch with the necessary new protocol implementations which require more processing battery power as well as a SIM-card slot, while keeping size and battery life unaffected - a typical HW/SW co-design problem. The next two figures illustrate this problem in the context of our case study. Figure~\ref{fig:tangles} is intended to represent the scale of the problem and to indicated the complex overlaps between domains, expressed through colour codes.
 
 \begin{figure}[htbp]
 	\centering
@@ -465,7 +477,8 @@ This high problem complexity made the change analysis steps (CPS3) very challeng
 	\label{fig:tangles}
 \end{figure}
 
-Therefore our next step involved isolating the domains on which the tangle depends, design the necessary changes for the remaining domains, and finally reintroducing the changed domains and in a greatly simplified context re-attempt the co-design of the tangled domains as shown in Figure~\ref{fig:pprog}. This resulted in a successful solution, which during the validation (Step CPS4) was accepted by all stakeholders, including the relevant EU institutions. 
+Due to the complex tangles, our next step involved isolating the domains on which the tangle depends, design the necessary changes for the remaining domains, and finally reintroducing the changed domains and in a greatly simplified context re-attempt the co-design of the tangled domains. Figure~\ref{fig:pprog} is intended to indicate the complexity of this interaction. An example of such tangle between subproblems is the introduction of several new technologies by one of the distributed teams, i.e. micro-services, etc. as result of the necessary architecture evolution towards supporting the OSLC standard. Since the remaining teams were not familiar with these new technologies, this had an impact on the composition and responsibilities of the other teams as well as introduced the necessity of change (trainings, new hires, etc.) in these domains. 
+The co-design of these tangled sub-problems resulted in a successful solution, which during the validation (Step CPS4) was accepted by all stakeholders, including the relevant EU institutions. 
 
 \begin{figure}[htbp]
 	\centering
@@ -474,7 +487,7 @@ Therefore our next step involved isolating the domains on which the tangle depen
 	\label{fig:pprog}
 \end{figure}
 
-That is where the study stopped. Step CPS5 --- migrating from original environment $E$ to the newly defined $F$ --- is still ongoing within the work package.
+That is where the study stopped. Step CPS5 --- migrating from original environment $E$ to the newly defined $F$ --- was completed only recently, and long after the case study.
 
 \section{Discussion}\label{sect:Discussion}
 
